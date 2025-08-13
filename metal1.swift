@@ -67,7 +67,6 @@ class MetalCompute {
         }
         self.commandQueue = commandQueue
         
-        // Create compute pipeline using external shader file
         guard let library = device.makeDefaultLibrary(),
               let function = library.makeFunction(name: "doubleArray"),
               let pipelineState = try? device.makeComputePipelineState(function: function) else {
